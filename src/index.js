@@ -1,6 +1,12 @@
 // Create a tagged template lf`...` that formats text using LF line endings.
 var lf = () => {};
 
+// Create a tagged template cr`...` that formats text using CR line endings.
+var cr = () => {};
+
+// Create a tagged template crlf`...` that formats text using CRLF line endings.
+var crlf = () => {};
+
 var transformLineEnding = (string, lineEnding) => {
   if (lineEnding === LineEndings.CR) {
     string = LineEndingReplacements.replaceCRLF(string, "\r");
@@ -37,6 +43,8 @@ var LineEndingReplacements = {
 
 module.exports = {
   lf,
+  cr,
+  crlf,
   LineEndings,
   transformLineEnding
 };
