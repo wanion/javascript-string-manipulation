@@ -8,6 +8,8 @@ var cr = () => {};
 var crlf = () => {};
 
 var transformLineEnding = (string, lineEnding) => {
+  string = (string != null ? string.toString() : "");
+
   if (lineEnding === LineEndings.CR) {
     string = LineEndingReplacements.replaceCRLF(string, "\r");
     string = LineEndingReplacements.replaceLF(string, "\r");
