@@ -36,6 +36,8 @@ const transformLineEnding = (string, lineEnding) => {
   return string;
 };
 
+const disableConverter = Symbol.for("crlf-converter-disable");
+
 const LineEndings = {
   CR: Symbol("CR"),
   LF: Symbol("LF"),
@@ -60,6 +62,7 @@ module.exports = {
   lf,
   cr,
   crlf,
+  disableConverter,
   LineEndings,
   transformLineEnding
 };
