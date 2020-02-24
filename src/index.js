@@ -1,5 +1,11 @@
 // Create a tagged template lf`...` that formats text using LF line endings.
-const lf = () => {};
+const lf = (strings, ...values) => {
+  return strings.reduce((result, literal, index) => {
+    let value = (values[index] != null ? values[index] : "");
+
+    return `${result}${literal}${value}`;
+  }, "");
+};
 
 // Create a tagged template cr`...` that formats text using CR line endings.
 const cr = () => {};
