@@ -58,6 +58,8 @@ describe("Main Module Tests (src/index.spec.js)", () => {
       "In src/index.spec.js, the third test should fail when `lf` doesn't replace line endings."
     ).to.equal(1);
 
+    failingMocha.unloadFiles();
+
     // Second run: learner-written test should pass.
 
     global.lf = {
@@ -89,5 +91,7 @@ describe("Main Module Tests (src/index.spec.js)", () => {
       await passingFailureCount,
       "In src/index.spec.js, the third test should pass when `lf` replaces line endings."
     ).to.equal(0);
+
+    passingMocha.unloadFiles();
   });
 });
