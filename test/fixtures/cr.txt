@@ -1,0 +1,1 @@
+Hello there,This file uses carriage-return characters at the ends of lines.This is abnormal in modern operating systems.We can use this file to test our CRLF converter.That's all for now.
