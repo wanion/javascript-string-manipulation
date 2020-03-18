@@ -2,7 +2,7 @@ var index = require("./index.js");
 var LineEndings = index.LineEndings;
 var transformLineEnding = index.transformLineEnding;
 
-var helpText = require("./help.js");
+var helpText = require("./info.js");
 var help = helpText.help;
 var usage = helpText.usage;
 
